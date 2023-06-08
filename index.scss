@@ -52,11 +52,12 @@ body {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 42px;
+        gap: 30px;
         margin-right: 70px;
         list-style-type: none;
       }
       a {
+        padding: 4px;
         text-decoration: none;
         font-style: normal;
         font-weight: 400;
@@ -65,6 +66,9 @@ body {
         /* identical to box height, or 175% */
         text-align: center;
         color: #5f5b53;
+      }
+      a:hover {
+        color: #171100;
       }
       button {
         padding: 11px 41px;
@@ -113,8 +117,9 @@ body {
     padding: 150px 0 65px 0;
     display: flex;
     align-items: center;
-
+    gap: 70px;
     .left {
+      width: 60%;
       .title {
         font-weight: 800;
         font-style: italic;
@@ -134,8 +139,11 @@ body {
       }
     }
     .right {
+      flex-grow: 1;
       img {
-        width: 500px;
+        width: 100%;
+        box-shadow: -3px 5px 5px 10px #4a3807;
+        border-radius: 6px;
       }
     }
   }

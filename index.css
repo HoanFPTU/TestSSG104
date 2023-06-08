@@ -9,10 +9,6 @@
   --primary-color: #ffb900;
 }
 
-body {
-  background-color: black;
-}
-
 .content {
   max-width: 1170px;
   margin: auto;
@@ -26,7 +22,8 @@ body {
 .block1 .sticky {
   padding-bottom: 26px;
   position: fixed;
-  top: 10px;
+  padding-top: 10px;
+  top: 0px;
   width: 100%;
   background-color: #ffdd64;
   z-index: 1;
@@ -53,10 +50,9 @@ body {
   margin-left: 5px;
 }
 .block1 .sticky .header ul {
-  margin-left: 450px;
-  margin-right: 70px;
+  flex-grow: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   gap: 42px;
   margin-right: 70px;
@@ -84,12 +80,39 @@ body {
   color: #ffffff;
   background-color: #171100;
 }
+.block1 .sticky .header .btn {
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+}
+.block1 .sticky .header .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.block1 .sticky .header .btn:hover::before {
+  transform: translateX(0);
+}
 .block1 .block1__body {
   padding: 150px 0 65px 0;
   display: flex;
   align-items: center;
 }
 .block1 .block1__body .left .title {
+  font-weight: 800;
   font-style: italic;
   font-size: 100px;
   color: #14464b;
@@ -103,7 +126,26 @@ body {
   text-align: center;
   margin-left: 10px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 .block1 .block1__body .right img {
   width: 500px;
+}
+
+.block2 {
+  height: 900px;
+  width: 100%;
+  padding-top: 70px;
+  background-color: #ffb900;
+  background-image: linear-gradient(180deg, #ffdd64 0%, #bfbcb3 100%);
+}
+.block2 .content .title {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  /* identical to box height, or 126% */
+  letter-spacing: -0.02em;
+  color: #171100;
 }/*# sourceMappingURL=index.css.map */

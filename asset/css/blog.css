@@ -1,5 +1,38 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  --primary-color: #ffb900;
+}
+
 body {
-  background-color: #ffb900;
+  background-color: #ccc;
   background-image: linear-gradient(180deg, #ffdd64 0%, #bfbcb3 100%);
 }
 
@@ -9,6 +42,117 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.content {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.content-blog {
+  max-width: 1000px;
+  margin: auto;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  --primary-color: #ffb900;
+}
+
+.sticky {
+  padding-bottom: 26px;
+  position: fixed;
+  padding-top: 10px;
+  top: 0px;
+  width: 100%;
+  background-color: #ffdd64;
+  z-index: 1;
+  box-shadow: 5px 1px 1px 1px rgba(0, 0, 0, 0.114);
+}
+.sticky .header {
+  margin: auto;
+  padding-top: 26px;
+  height: 50px;
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  display: flex;
+  align-items: center;
+}
+.sticky .header img {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  line-height: 1.3;
+}
+.sticky .header p {
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  color: #14464b;
+  margin-left: 5px;
+}
+.sticky .header ul {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-right: 70px;
+  list-style-type: none;
+}
+.sticky .header a {
+  padding: 4px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+  text-align: center;
+  color: #5f5b53;
+}
+.sticky .header a:hover {
+  color: #171100;
+}
+.sticky .header button {
+  padding: 11px 41px;
+  border-radius: 24.5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+  text-align: center;
+  border: none;
+}
+.sticky .header .btn {
+  color: rgba(0, 0, 0, 0.714);
+  border: 1px solid rgba(0, 0, 0, 0.714);
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+}
+.sticky .header .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.714);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.sticky .header .btn:hover {
+  color: white;
+}
+.sticky .header .btn:hover::before {
+  transform: translateX(0);
 }
 
 .body1 {
@@ -32,7 +176,7 @@ a:hover {
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   height: 150px;
-  width: calc(25% - 20px);
+  width: calc(25% - 15px);
   border-radius: 10px;
 }
 .body1 .contain-subjects .subject a {
@@ -51,7 +195,7 @@ a:hover {
 .body1 .contain-items .item {
   border-radius: 10px;
   background-color: #fff;
-  width: calc(33% - 10px);
+  width: calc(33.33% - 6.7px);
 }
 .body1 .contain-items .item img {
   border-radius: 10px 10px 0px 0px;
@@ -67,4 +211,61 @@ a:hover {
 .body1 .contain-items .item i,
 .body1 .contain-items .item p {
   font-size: 12px;
+}
+
+.video .item {
+  position: relative;
+}
+.video i.play {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 36px !important;
+  position: absolute;
+  top: 125px;
+}
+
+.main-blog {
+  box-shadow: -3px 5px 5px 10px #4a3807;
+  min-height: 100vh;
+  padding: 150px 50px 65px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+.main-blog figure {
+  width: 100%;
+  text-align: center;
+}
+.main-blog figure img {
+  text-align: center;
+  width: 80%;
+  border-radius: 10px;
+  min-width: 60%;
+}
+.main-blog figure figcaption {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.main-blog h1 {
+  font-size: 40px;
+  position: relative;
+}
+.main-blog h1::after {
+  content: "";
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: -10px;
+  width: 80%;
+  left: 0px;
+}
+.main-blog p {
+  font-size: 22px;
+  line-height: 1.4;
 }/*# sourceMappingURL=blog.css.map */

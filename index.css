@@ -4,13 +4,31 @@
   box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 :root {
   font-family: "Poppins", sans-serif;
   --primary-color: #ffb900;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 body {
@@ -199,4 +217,66 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+footer {
+  background: #2e2307;
+  color: white;
+  padding: 96px 0px 36px 0px;
+}
+footer .box-top {
+  display: flex;
+  gap: 20px;
+}
+footer .box-top .left {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .box-top .left p {
+  max-width: 90%;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #bfbcb2;
+}
+footer .box-top .left .box-icon {
+  display: flex;
+  gap: 20px;
+}
+footer .box-top .right {
+  display: flex;
+  gap: 20px;
+}
+footer .box-top .right li {
+  list-style: none;
+}
+footer .box-top .right li:first-child {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: white;
+  position: relative;
+}
+footer .box-top .right li:first-child::after {
+  content: "";
+  background-color: #bfbcb2;
+  width: 100%;
+  max-width: 150px;
+  left: 0;
+  height: 1px;
+  position: absolute;
+  bottom: -12px;
+}
+footer .box-top .right .desc {
+  margin-top: 10px;
+  font-weight: 4 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: #bfbcb2;
+  font-family: "Poppins";
+  font-style: normal;
 }/*# sourceMappingURL=index.css.map */

@@ -256,6 +256,16 @@ a:hover {
   font-size: 20px;
   margin-top: 10px;
 }
+.main-blog img {
+  text-align: center;
+  width: 80%;
+  border-radius: 10px;
+  min-width: 60%;
+}
+.main-blog h3 {
+  font-size: 24px;
+  margin-left: 30px;
+}
 .main-blog h1 {
   font-size: 40px;
   position: relative;
@@ -273,6 +283,17 @@ a:hover {
   font-size: 22px;
   line-height: 1.4;
   text-indent: 40px;
+}
+.main-blog span,
+.main-blog ul > li,
+.main-blog ul {
+  margin-left: 30px;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+.main-blog .non-ls {
+  list-style: none;
 }
 
 .recommend {

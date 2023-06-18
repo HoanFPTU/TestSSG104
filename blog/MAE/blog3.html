@@ -52,111 +52,142 @@
     </div>
     <div class="content-blog">
       <div class="main-blog">
-        <h1>Tìm hiểu về Mảng trong lập trình C</h1>
-        <p class="non-mg">
-          - Mảng được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất,
-          thay vì khai báo các biến riêng biệt cho mỗi biến giá trị.
-        </p>
-        <p class="non-mg">
-          - Để tạo mảng, hãy xác định kiểu dữ liệu (như ) và chỉ định tên của
-          mảng theo sau là dấu ngoặc vuông []. Int
-        </p>
-        <p class="non-mg">
-          - Để chèn giá trị vào nó, hãy sử dụng danh sách được phân tách bằng
-          dấu phẩy, bên trong dấu ngoặc nhọn:
-        </p>
-        <p class="non-mg">
-          <b
-            >int myNumbers[] = {25, 50, 75, 100}; //chúng ta đã tạo ra một mảng
-            gồm 4 dữ liệu kiểu integer</b
-          >
-        </p>
-        <p class="non-mg">
-          - Để truy cập một phần tử mảng, bạn phải sử dụng chỉ số của phần tử đó
-          trong mảng.Chỉ số trong mảng bắt đầu bằng [0] là chỉ số đầu tiên. [1]
-          là chỉ số thứ hai, v.v. Câu lệnh này truy cập giá trị của phần tử đầu
-          tiên [0] trong mảng:
-        </p>
-        <p class="non-mg">
-          <b
-            >int myNumbers[] = {25, 50, 75, 100}; printf("%d", myNumbers[0]); //
-            In ra phần tử đầu tiên trong màng là 25
-          </b>
-        </p>
-        <p class="non-mg">
-          - Sau đây là cách thay đổi giá trị của một phần tử cụ thể trong mảng:
+        <h1>MA TRẬN BẬC THANG DÕNG VÀ CÁC PHÉP BIẾN ĐỔI SƠ CẤP DÕNG</h1>
+        <h2>1. Ma trận bậc thang (dòng) (echelon matrix):</h2>
+        <ul class="non-mg">
+          Ma trận bậc thang là ma trận thỏa mãn điều kiện:
+          <li class="non-ls">
+            - Dòng có tất cả các phần tử bằng 0 (nếu có) luôn nằm phía dưới dòng
+            có phần tử khác 0 (nếu có);
+          </li>
+          <li class="non-ls">
+            - Với 2 dòng khác 0, phần tử khác 0 đầu tiên (nếu có) phải là số 1
+            và luôn nằm dưới luôn ở bên phải so với phần tử khác 0 đầu tiên (nếu
+            có) của dòng trên.
+          </li>
+          <li class="non-ls"><b>Ví dụ:</b> các ma trận bậc thang sau đây.</li>
+          <figure>
+            <img
+              src="../../img/blog/MAE/blog3/1.png"
+              alt="Thành phần máy tính"
+            />
+            <figcaption></figcaption>
+          </figure>
+          <ul>
+            <b>***Đối với ma trận bậc thang rút gọn: </b>
+            <li class="non-ls">+ Ma trận phải là ma trận bậc thang.</li>
+            <li class="non-ls">
+              + Ngoài số 1 chính ra, các phần tử khác trên cùng hàng đều là số
+              0.
+            </li>
+            <li class="non-ls">Ví dụ:</li>
+            <figure>
+              <img
+                src="../../img/blog/MAE/blog3/2.png"
+                alt="Thành phần máy tính"
+              />
+              <figcaption></figcaption>
+            </figure>
+          </ul>
+        </ul>
+
+        <h2>2. Các phép biến đổi sơ cấp dòng (BĐSC)</h2>
+        <p>
+          - Trên các ma trận (elementary row operations) Đó là một trong ba phép
+          biến đổi sau đây trên mỗi ma trận
         </p>
 
-        <p class="non-mg">
-          <b>
-            int myNumbers[] = {25, 50, 75, 100}; myNumbers[0] = 33; printf("%d",
-            myNumbers[0]); // sau khi gán giá trị mới cho phần tử đầu tiên thì
-            bây giờ sẽ in ra 33 thay vì 25
-          </b>
+        <p>
+          <b>(E1): </b>
+          Đổi chỗ hai dòng cho nhau di  dj. Ví dụ: Đổi chỗ dòng d1  d2 trong
+          ma trận sau đây.
         </p>
-        <p class="non-mg">
-          - Bạn có thể lặp qua các phần tử mảng với vòng lặp. <b>for</b>
+
+        <figure>
+          <img src="../../img/blog/MAE/blog2/3.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          <b>(E2): </b>
+          Nhân một dòng với một số khác không di ->a.di (a ≠0). -Ví dụ: Nhân
+          dòng thứ 2 của ma trận với 2.
         </p>
-        <p class="non-mg">- Ví dụ sau xuất ra tất cả các phần tử trong mảng:</p>
-        <!--  -->
-        <p class="non-mg">
-          <b
-            >int myNumbers[] = {25, 50, 75, 100}; int i; for (i = 0; i &lt; 4;
-            i++) { printf("%d\n", myNumbers[i]); //in ra từng phần tử của màng
-            dựa trên giá trị i tăng dần từ 0->3 }
-          </b>
+
+        <figure>
+          <img src="../../img/blog/MAE/blog2/4.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          <b>(E3): </b>
+          Thêm (bớt) vào một dòng một bội của dòng khác di->di + a.dj (a tùy ý).
+          -Ví dụ: Ta có d2->d2 + 3.d1
+        </p>
+
+        <figure>
+          <img src="../../img/blog/MAE/blog2/5.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <h2>3. Tính chất quan trọng:</h2>
+        <p>
+          Mọi ma trận khác không, sau một số hữu hạn các phép BĐSC, đều đưa được
+          về một ma trận bậc thang mà được gọi là dạng bậc thang của ma trận ban
+          đầu.
+        </p>
+        <p>
+          <b>Chú ý:</b> Dạng bậc thang của mỗi ma trận không duy nhất và thường
+          có nhiều cách BĐSC để đưa một ma trận về dạng bậc thang.
         </p>
       </div>
+
       <div class="recommend">
         <p>Có thể bạn sẽ thích</p>
         <div class="item-recommend">
           <div class="item">
-            <img src="../../img/blog/PRF/blog1/avt.png" alt="" />
+            <img src="../../img/blog/MAE/blog1/avt.jfif" alt="" />
             <div class="text-item">
               <h3 class="title">
-                <a href="../../blog/PRF/1.html"
-                  >Giới thiệt về thuật toán kiểm tra xem một số có phải là phần
-                  tử của dãy Fibonacci hay không.</a
+                <a href="../../blog/MAE/blog1.html"
+                  >KHÁI NIỆM VỀ MA TRẬN VÀ VÀI LOẠI MA TRẬN</a
                 >
               </h3>
-              <i>Subject: <b>PRF</b> </i>
-              <p>Author: Hưng</p>
+              <i>Subject: <b>MAE</b> </i>
+              <p>Author: Quang</p>
             </div>
           </div>
           <div class="item">
-            <img src="../../img/blog/PRF/blog2/avt.png" alt="" />
+            <img src="../../img/blog/MAE/blog1/avt.jfif" alt="" />
             <div class="text-item">
               <h3 class="title">
-                <a href="../../blog/PRF/2.html"
-                  >Giới thiệu về con trỏ trong C</a
+                <a href="../../blog/MAE/blog2.html"
+                  >CÁC PHÉP TOÁN TRÊN MA TRẬN</a
                 >
               </h3>
-              <i>Subject: <b>PRF</b> </i>
-              <p>Author: Hưng</p>
+              <i>Subject: <b>MAE</b> </i>
+              <p>Author: Quang</p>
             </div>
           </div>
           <div class="item">
-            <img src="../../img/blog/PRF/blog3/avt.webp" alt="" />
+            <img src="../../img/blog/MAE/blog1/avt.jfif" alt="" />
             <div class="text-item">
               <h3 class="title">
-                <a href="../../blog/PRF/3.html"
-                  >Tìm hiểu về Mảng trong lập trình C</a
+                <a href="../../blog/MAE/blog3.html"
+                  >MA TRẬN BẬC THANG DÕNG VÀ CÁC PHÉP BIẾN ĐỔI SƠ CẤP DÒNG.</a
                 >
               </h3>
-              <i>Subject: <b>PRF</b> </i>
-              <p>Author: Hưng</p>
+              <i>Subject: <b>MAE</b> </i>
+              <p>Author: Quang</p>
             </div>
           </div>
           <div class="item">
-            <img src="../../img/blog/PRF/blog4/avt.jpg" alt="" />
+            <img src="../../img/blog/MAE/blog1/avt.jfif" alt="" />
             <div class="text-item">
               <h3 class="title">
-                <a href="../../blog/PRF/4.html"
-                  >Tìm hiểu về kích cỡ của các kiểu dữ liệu.</a
+                <a href="../../blog/MAE/blog4.html"
+                  >CÁCH TÍNH ĐỊNH THỨC TRONG MA TRẬN</a
                 >
               </h3>
-              <i>Subject: <b>PRF</b> </i>
-              <p>Author: Hưng</p>
+              <i>Subject: <b>MAE</b> </i>
+              <p>Author: Quang</p>
             </div>
           </div>
         </div>

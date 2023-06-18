@@ -52,117 +52,101 @@
     </div>
     <div class="content-blog">
       <div class="main-blog">
-        <h1>CÁC PHÉP TOÁN TRÊN MA TRẬN</h1>
-        <h2>1. Phép cộng ma trận (matrix addition):</h2>
+        <h1>CÁCH TÍNH ĐỊNH THỨC TRONG MA TRẬN</h1>
+        <h2>1. Định thức cấp 2</h2>
         <ul class="non-mg">
-          <li class="non-ls">
-            Tổng hai ma trận cùng cấp A,B. Ta cộng từng phần từ của ma trận A
-            với phần tử ở đúng vị trí đó trong ma trận B.
-          </li>
-
           <figure>
             <img
-              src="../../img/blog/MAE/blog2/1.png"
+              src="../../img/blog/MAE/blog4/1.png"
               alt="Thành phần máy tính"
             />
             <figcaption></figcaption>
           </figure>
           <li class="non-ls">
-            <b>Chú ý:</b> Hai ma trận chỉ cộng được với nhau khi chúng có cùng
-            cấp.
+            <b>-Nhận xét:</b> Định thức cấp 2 được dùng để xác định tích có
+            hướng của hai vecto, diện tích hình bình hành và diện tích tam giác
+            trong hình học.
           </li>
         </ul>
-        <h2>2.Phép nhân số với ma trận (scalar multiplication):</h2>
 
-        <ul class="non-mg">
-          <li class="non-ls">
-            Cho số a và ma trận A. Ta nhân từng phần tử trong ma trân A với a.
-          </li>
-
-          <figure>
-            <img
-              src="../../img/blog/MAE/blog2/2.png"
-              alt="Thành phần máy tính"
-            />
-            <figcaption></figcaption>
-          </figure>
-        </ul>
-
-        <h2>3.Phép nhân ma trận (matrix multiplication):</h2>
-
-        <ul class="non-mg">
-          <li class="non-ls">
-            Cho hai ma trận A, B. Tích của A với B là ma trận, kí hiệu AB.
-          </li>
-
-          <figure>
-            <img
-              src="../../img/blog/MAE/blog2/3.png"
-              alt="Thành phần máy tính"
-            />
-            <figcaption></figcaption>
-          </figure>
-        </ul>
-        <ul class="non-mg">
-          <b>Chú ý:</b>
-          <li class="non-ls">
-            Hai ma trận chỉ nhân được với nhau khi số cột của ma trận đầu bằng
-            số dòng của ma trận thứ hai.
-          </li>
-          <li class="non-ls">
-            Muốn tìm phần tử ở dòng i, cột j của ma trận tích A.B, ta nhân các
-            phần tử ở dòng i của ma trận A lần lượt với các phần tử ở cột j của
-            ma trận B rồi cộng các tích đó lại.
-          </li>
-        </ul>
-        <h2>4. Phép chuyển vị ma trận (transpose of a matrix)</h2>
-
-        <ul class="non-mg">
-          <li class="non-ls">
-            Cho ma trận A. Ma trận thu được từ A bằng cách viết các dòng của A
-            lần lượt thành các cột được gọi là ma trận chuyển vị của A và kí
-            hiệu là At . Khi đó At là ma trận cấp n×m.
-          </li>
-
-          <figure>
-            <img
-              src="../../img/blog/MAE/blog2/4.png"
-              alt="Thành phần máy tính"
-            />
-            <figcaption></figcaption>
-          </figure>
-          <li class="non-ls">
-            Ta có (At)t = A, tức là sau hai lần chuyển vị ta lại trở về ma trận
-            ban đầu.
-          </li>
-        </ul>
-        <h2>5. Lũy thừa một ma trận vuông (powers of a matrix)</h2>
-
-        <ul class="non-mg">
-          <li class="non-ls">
-            -Khi A là một ma trận vuông, ta có thêm phép toán lũy thừa. Cụ thể,
-            lũy thừa bậc n (n nguyên dương) của A là ma trân tích của n ma trận
-            A, nghĩa là:
-          </li>
-          <li class="non-ls"><b>An : = A.A. … A (n lần) . </b></li>
-
-          <figure>
-            <img
-              src="../../img/blog/MAE/blog2/5.png"
-              alt="Thành phần máy tính"
-            />
-            <figcaption></figcaption>
-          </figure>
-        </ul>
-        <h2>CÁC TÍNH CHẤT</h2>
-        <p class="non-mg">
-          Giả sử các phép toán dưới đây đều thực hiện được với các ma trận A, B,
-          C và các số a, b. Khi đó ta có các tính chất sau đây:
-        </p>
-        <figure>
-          <img src="../../img/blog/MAE/blog2/6.png" alt="Thành phần máy tính" />
+        <h2>2. Định thức cấp 3</h2>
+        <figure class="non-mg">
+          <img src="../../img/blog/MAE/blog4/2.png" alt="Thành phần máy tính" />
           <figcaption></figcaption>
         </figure>
+        <p>
+          <b>
+            ***Ta có thể dùng công thức Sarrus được minh họa bằng sơ đồ dưới
+            đây.
+          </b>
+        </p>
+        <figure class="non-mg">
+          <img src="../../img/blog/MAE/blog4/3.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+
+        <p>
+          <b> Nhận xét: </b>
+          Định thức cấp 3 được dùng để xác định tích hỗn tạp của ba vectơ, thể
+          tích hình hộp (xiên) và thể tích khối tứ diện trong hình học.
+        </p>
+        <h2>3.Định thức cấp N</h2>
+
+        <p>
+          -Giả sử định thức (cấp n = k) của mỗi ma trận vuông cấp n = k ≥ 1 đã
+          được xác định. Xét ma trận vuông cấp n = k + 1. Định thức (cấp n = k +
+          1) của A, ký hiệu detA, là một số được xác định như sau.
+        </p>
+        <figure class="non-mg">
+          <img src="../../img/blog/MAE/blog4/4.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          Ở đây, Anj là tích của (– 1)n+j với định thức cấp k của ma trận nhận
+          được từ A bằng cách xóa đi dòng n và cột j; j = 1, 2, …, n. Như vậy,
+          theo nguyên lý quy nạp, ta đã định nghĩa được định thức cấp n (≥ 1)
+          bất kỳ.
+        </p>
+        <p class="non-ls"><b>Ví dụ 1:</b></p>
+        <figure class="non-mg">
+          <img src="../../img/blog/MAE/blog4/5.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p class="non-ls"><b>(trùng lại định nghĩa sơ cấp!).</b></p>
+        <figure class="non-mg">
+          <img src="../../img/blog/MAE/blog4/6.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <figure class="non-mg">
+          <img src="../../img/blog/MAE/blog4/7.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <ul>
+          <b>CÁC TÍNH CHẤT CỦA ĐỊNH THỨC</b>
+          <li>detA = det(At ).</li>
+          <li>det(AB) = detA.detB với ma trận A, B vuông cùng cấp.</li>
+          <li>Nếu có một dòng (hoặc một cột) không thì định thức bằng 0.</li>
+          <li>
+            Định thức của ma trận tam giác hay ma trận chéo bằng tích các phần
+            tử thuộc đường chéo chính.
+          </li>
+          <li>
+            Nếu có hai dòng (hoặc hai cột) giống nhau hay tỉ lệ với nhau thì
+            định thức bằng 0.
+          </li>
+          <li>
+            Nếu đổi chỗ hai dòng (hoặc hai cột) bất kì thì định thức đổi dấu.
+          </li>
+          <li>
+            Nếu nhân một dòng (hoặc một cột) bất kỳ với một số thì định thức
+            cũng được nhân với số đó. Nói cách khác, nhân tử chung của một dòng
+            (hoặc một cột) có thể đem ra ngoài định thức
+          </li>
+          <li>
+            Định thức không thay đổi khi thêm hoặc bớt vào một dòng (hoặc một
+            cột) một bội của một dòng (hay cột) khác.
+          </li>
+        </ul>
       </div>
 
       <div class="recommend">

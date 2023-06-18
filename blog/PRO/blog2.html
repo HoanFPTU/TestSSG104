@@ -52,60 +52,111 @@
     </div>
     <div class="content-blog">
       <div class="main-blog">
-        <h1>Tìm hiểu về Mảng trong lập trình C</h1>
-        <p class="non-mg">
-          - Mảng được sử dụng để lưu trữ nhiều giá trị trong một biến duy nhất,
-          thay vì khai báo các biến riêng biệt cho mỗi biến giá trị.
-        </p>
-        <p class="non-mg">
-          - Để tạo mảng, hãy xác định kiểu dữ liệu (như ) và chỉ định tên của
-          mảng theo sau là dấu ngoặc vuông []. Int
-        </p>
-        <p class="non-mg">
-          - Để chèn giá trị vào nó, hãy sử dụng danh sách được phân tách bằng
-          dấu phẩy, bên trong dấu ngoặc nhọn:
-        </p>
-        <p class="non-mg">
-          <b
-            >int myNumbers[] = {25, 50, 75, 100}; //chúng ta đã tạo ra một mảng
-            gồm 4 dữ liệu kiểu integer</b
-          >
-        </p>
-        <p class="non-mg">
-          - Để truy cập một phần tử mảng, bạn phải sử dụng chỉ số của phần tử đó
-          trong mảng.Chỉ số trong mảng bắt đầu bằng [0] là chỉ số đầu tiên. [1]
-          là chỉ số thứ hai, v.v. Câu lệnh này truy cập giá trị của phần tử đầu
-          tiên [0] trong mảng:
-        </p>
-        <p class="non-mg">
-          <b
-            >int myNumbers[] = {25, 50, 75, 100}; printf("%d", myNumbers[0]); //
-            In ra phần tử đầu tiên trong màng là 25
-          </b>
-        </p>
-        <p class="non-mg">
-          - Sau đây là cách thay đổi giá trị của một phần tử cụ thể trong mảng:
-        </p>
+        <h1>HƯỚNG DẪN CÀI ĐẶT NETBEANS 8.2 VÀ JDK 1.8</h1>
+        <pre style="font-size: 16px">
+            #include &#x3C;stdio.h&#x3E;
+            #include &#x3C;stdlib.h&#x3E;
+            
+            /* run this program using the console pauser or add your own getch,
+            system(&#x22;pause&#x22;) or input loop */
+            int isFibonacci(int n);
+            int main(int argc, char *argv[])
+            {
+                int n;
+                do
+                {
+                    printf(&#x22;Enter a number: &#x22;);
+                    scanf(&#x22;%d&#x22;, &#x26;n);
+                    if(isFibonacci(n)==1)
+                        printf(&#x22;It is a Fibonacci element\n&#x22;);
+                    else printf(&#x22;It is not a Fibonacci element\n&#x22;);
+                } while (n &#x3E; 1);
+            
+                getch();
+                return 0;
+            }
+            int isFibonacci(int n)
+            {
+                int t1 = 1, t2 = 1, f = 1;
+                if(n==1)
+                    return 1;
+                while (f&#x3C;n)
+                {
+                    f = t1 + t2;
+                    t1 = t2;
+                    t2 = f;
+                }
+                return n==f;
+            }
+            void printFibonacci(int n)
+            {
+                int i=1;
+                for(i;i&#x3C;=n;i++)
+                {
+                    if(isFibonacci(i)==1)
+                    {
+                        printf(&#x22;%d\t&#x22;, i);
+                    }
+                }
+            }
+            </pre
+        >
 
-        <p class="non-mg">
-          <b>
-            int myNumbers[] = {25, 50, 75, 100}; myNumbers[0] = 33; printf("%d",
-            myNumbers[0]); // sau khi gán giá trị mới cho phần tử đầu tiên thì
-            bây giờ sẽ in ra 33 thay vì 25
-          </b>
+        <figure>
+          <img
+            src="../../img/blog/PRF/blog1/blog11.png"
+            alt="Thành phần máy tính"
+          />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          Đầu tiên chúng ta tìm hiểu dãy Fibonacci là gì: Dãy Fibonacci là dãy
+          vô hạn các số tự nhiên bắt đầu bằng hai phần tử 0 hoặc 1 và 1, các
+          phần tử sau đó được thiết lập theo quy tắc mỗi phần tử luôn bằng tổng
+          hai phần tử trước nó. Công thức của dãy Fibonacci là:
         </p>
-        <p class="non-mg">
-          - Bạn có thể lặp qua các phần tử mảng với vòng lặp. <b>for</b>
+        <figure>
+          <img
+            src="../../img/blog/PRF/blog1/blog12.png"
+            alt="Thành phần máy tính"
+          />
+          <figcaption></figcaption>
+        </figure>
+        <p>Chương trình định nghĩa một hàm isFibonacci và hàm main.</p>
+        <p>
+          Hàm <b>isFibonacci</b> nhận một số nguyên <b>n</b> làm đối số và trả
+          về một số nguyên. Nó kiểm tra xem số <b>n</b> có phải là phần tử của
+          dãy Fibonacci hay không. Trong hàm này, ba biến <b>t1</b>, <b>t2</b>,
+          và<b> f</b> được khởi tạo ban đầu là 1. Nếu <b>n</b> là 1, nó trả về
+          1, cho biết rằng nó là một phần tử Fibonacci. Trong vòng lặp while,<b>
+            f</b
+          >
+          được tính bằng tổng của hai số trước đó <b>t1</b> và <b>t2</b>, sau đó
+          <b>t1</b> và <b>t2</b> được cập nhật. Nếu <b>n</b> bằng<b> f</b>, nó
+          trả về 1, ngược lại trả về 0.
         </p>
-        <p class="non-mg">- Ví dụ sau xuất ra tất cả các phần tử trong mảng:</p>
-        <!--  -->
-        <p class="non-mg">
-          <b
-            >int myNumbers[] = {25, 50, 75, 100}; int i; for (i = 0; i &lt; 4;
-            i++) { printf("%d\n", myNumbers[i]); //in ra từng phần tử của màng
-            dựa trên giá trị i tăng dần từ 0->3 }
-          </b>
-        </p>
+        <h2>Trong hàm main</h2>
+        <ul>
+          <li>Một biến số nguyên <b>n</b> được khai báo.</li>
+          <li>
+            Chương trình vào một vòng lặp <b>do-while</b>, chạy cho đến khi giá
+            trị của <b>n</b> lớn hơn 1.
+          </li>
+          <li>
+            Trong vòng lặp, người dùng được nhắc để nhập một số và sau đó
+            <b>isFibonacci</b> được gọi với số đó. Nếu kết quả trả về là 1,
+            thông báo rằng số đó là một phần tử của dãy Fibonacci được in ra.
+            Ngược lại, thông báo rằng số đó không phải là một phần tử của dãy
+            Fibonacci.
+          </li>
+        </ul>
+        <figure>
+          <img
+            src="../../img/blog/PRF/blog1/blog13.png"
+            alt="Thành phần máy tính"
+          />
+          <figcaption></figcaption>
+        </figure>
       </div>
       <div class="recommend">
         <p>Có thể bạn sẽ thích</p>

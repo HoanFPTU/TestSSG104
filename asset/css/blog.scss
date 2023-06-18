@@ -246,8 +246,17 @@ a:hover {
   justify-content: center;
   // align-items: center;
   figure {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     width: 100%;
     text-align: center;
+    span {
+      font-size: 20px;
+    }
+    b {
+      font-size: 20px;
+    }
     img {
       text-align: center;
       width: 80%;

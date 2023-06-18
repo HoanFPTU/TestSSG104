@@ -52,104 +52,90 @@
     </div>
     <div class="content-blog">
       <div class="main-blog">
-        <h1>Giới thiệu về con trỏ trong C</h1>
-        <p>
-          - Trong ngôn ngữ lập trình C, con trỏ là một biến đặc biệt được sử
-          dụng để lưu trữ địa chỉ của một biến khác. Nó cho phép chúng ta truy
-          cập và thay đổi giá trị của biến mục tiêu thông qua địa chỉ của nó.
-          Con trỏ là một khái niệm mạnh mẽ và cần thiết trong C, cho phép chúng
-          ta thực hiện các tác vụ phức tạp như cấp phát động bộ nhớ và thao tác
-          trên mảng. Để khai báo một con trỏ trong C, chúng ta sử dụng dấu sao
-          (*) trước tên biến. Ví dụ, khai báo một con trỏ kiểu nguyên int như
-          sau: <b>int *ptr</b>;
-        </p>
-        <p>
-          Sau khi con trỏ được khai báo, chúng ta có thể gán cho nó địa chỉ của
-          một biến bằng toán tử &. Ví dụ:
-        </p>
-        <pre style="font-size: 16px"><b>
-            int num = 10;
-            int *ptr;
-            ptr = &num;  // Gán địa chỉ của biến num cho con trỏ ptr
+        <h1>KHÁI NIỆM VỀ MA TRẬN VÀ VÀI LOẠI MA TRẬN</h1>
+        <h2>1. Khái niệm về ma trận</h2>
+        <ul class="non-mg">
+          <li class="non-ls">
+            Một ma trận cấp m×n (matrix of size m×n) (m, n tự nhiên dương) là
+            một bảng gồm m.n phần tử được sắp xếp thành m dòng và n cột dưới
+            dạng
+          </li>
+          <li class="non-ls">
+            Phần tử aij là phần tử ở dòng i và cột j của ma trận A; i là chỉ số
+            dòng, j là chỉ số cột của phần tử aij đó.
+          </li>
+          <figure>
+            <img
+              src="../../img/blog/MAE/blog1/1.png"
+              alt="Thành phần máy tính"
+            />
+            <figcaption></figcaption>
+          </figure>
+          <li class="non-ls">
+            Hai ma trận được xem là bằng nhau nếu chúng cùng cấp và mọi phần tử
+            tương ứng đều như nhau.
+          </li>
+          <figure>
+            <img
+              src="../../img/blog/MAE/blog1/2.png"
+              alt="Thành phần máy tính"
+            />
+            <figcaption></figcaption>
+          </figure>
+        </ul>
+        <h2>2. Vài loại ma trận</h2>
 
-        </b></pre>
-        <p>
-          - Chúng ta cũng có thể truy cập đến giá trị của biến mục tiêu bằng
-          cách sử dụng con trỏ. Để truy cập giá trị, chúng ta sử dụng toán tử *
-          trước tên con trỏ. Ví dụ:
-          <b
-            >int value = *ptr; // Lấy giá trị tại địa chỉ mà con trỏ ptr đang
-            trỏ đến</b
-          >
+        <p class="non-mg">
+          <b>a. Ma trận vuông</b> (square matrix): là ma trận có số dòng m bằng
+          số cột n (m = n là số tự nhiên dương), khi đó thay vì nói ma trận cấp
+          n×n ta chỉ nói đó là ma trận vuông cấp n.
         </p>
-        <p>
-          - Con trỏ trong C cũng được sử dụng rộng rãi trong việc quản lý bộ nhớ
-          động. Chúng ta có thể cấp phát và giải phóng bộ nhớ trong thời gian
-          chạy bằng các hàm như malloc(), calloc(), và free(). Con trỏ cũng cho
-          phép chúng ta thực hiện các thao tác trên mảng, bằng cách sử dụng các
-          con trỏ và phép tính số học con trỏ.
-        </p>
-        <p>Ví dụ về các thao tác trên mảng:</p>
         <figure>
-          <img
-            src="../../img/blog/PRF/blog2/blog21.png"
-            alt="Thành phần máy tính"
-          />
-          <figcaption>Output: 1, 2, 3, 4, 5</figcaption>
+          <img src="../../img/blog/MAE/blog1/3.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
         </figure>
-        <p>Ví dụ về <b> malloc()</b>:</p>
+        <p class="non-mg">
+          <b>b. Ma trận đơn vị</b> (identity matrix or unit matrix): là ma trận
+          vuông có tất cả các phần tử thuộc đường chéo chính đều bằng 1, các
+          phần tử còn lại đều bằng 0, kí hiệu là In hay chỉ đơn giản là I khi
+          cấp đã được chỉ rõ. Cũng có khi ký hiệu ma trận đơn vị là En hay E.
+        </p>
         <figure>
-          <img
-            src="../../img/blog/PRF/blog2/blog22.png"
-            alt="Thành phần máy tính"
-          />
-          <figcaption>Output: 1, 2, 3, 4, 5</figcaption>
+          <img src="../../img/blog/MAE/blog1/4.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
         </figure>
         <p>
-          Trong ví dụ trên, chúng ta sử dụng hàm <b>malloc()</b> để cấp phát 5
-          phần tử kiểu int trong bộ nhớ động. Trước khi sử dụng con trỏ
-          <b>ptr</b>, ta kiểm tra xem con trỏ có bằng <b>NULL</b> hay không để
-          đảm bảo rằng việc cấp phát bộ nhớ đã thành công. Sau đó, chúng ta gán
-          giá trị cho các phần tử trong mảng và in chúng ra màn hình. Cuối cùng,
-          chúng ta giải phóng bộ nhớ đã được cấp phát bằng cách sử dụng hàm
-          <b>free()</b>.
+          <b>c. Ma trận tam giác </b>(triangular matrix): là ma trận vuông có
+          tất cả các phần tử nằm phía dưới, hoặc phía trên đường chéo chính đều
+          bằng 0.
         </p>
-        <p>Ví dụ về <b>calloc()</b>:</p>
         <figure>
-          <img
-            src="../../img/blog/PRF/blog2/blog23.png"
-            alt="Thành phần máy tính"
-          />
-          <figcaption>Output: 0, 0, 0, 0, 0</figcaption>
+          <img src="../../img/blog/MAE/blog1/6.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
         </figure>
         <p>
-          Trong ví dụ này, chúng ta sử dụng hàm <b>calloc()</b> để cấp phát 5
-          phần tử kiểu int và khởi tạo giá trị 0 cho từng phần tử. Sau đó, chúng
-          ta in giá trị các phần tử trong mảng và giải phóng bộ nhớ đã được cấp
-          phát bằng hàm <b>free()</b>
+          <b>d. Ma trận chéo </b>Ma trận chéo (Diagonal matrix): là ma trận
+          vuông có tất cả các phần tử nằm ngoài đường chéo chính bằng 0.
         </p>
-        <p>
-          Lưu ý: Cả hai hàm <b>malloc()</b> và <b>malloc()</b> đều được sử dụng
-          để cấp phát bộ nhớ động, nhưng khác nhau ở cách khởi tạo giá trị ban
-          đầu cho phần tử trong mảng. <b>malloc()</b> không khởi tạo giá trị ban
-          đầu, trong khi calloc() khởi tạo giá trị 0 cho các phần tử.
-        </p>
-        <p>Ví dụ về <b>free()</b>:</p>
         <figure>
-          <img
-            src="../../img/blog/PRF/blog2/blog24.png"
-            alt="Thành phần máy tính"
-          />
-          <figcaption>Output: 10</figcaption>
+          <img src="../../img/blog/MAE/blog1/7.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
         </figure>
-        <p>
-          Trong ví dụ này, chúng ta cấp phát 1 phần tử kiểu int trong bộ nhớ
-          động bằng hàm <b>malloc()</b>. Sau đó, chúng ta gán giá trị 10 cho
-          phần tử và in giá trị đó ra màn hình. Cuối cùng, chúng ta giải phóng
-          bộ nhớ đã được cấp phát bằng hàm <b>free()</b>.
+        <p class="non-mg">
+          <b> e. Ma trận cột</b> (column matrix or column): là ma trận chỉ có
+          một cột.
         </p>
-        <!--  -->
+        <p class="non-mg">
+          <b>f. Ma trận dòng</b> (row matrix or row): là ma trận chỉ có một
+          dòng.
+        </p>
+        <p class="non-mg">
+          <b>g. Ma trận không</b> (zero matrix): là ma trận có tất cả các phần
+          tử đều bằng 0, kí hiệu là Om×n hay chỉ đơn giản là O khi cấp đã được
+          chỉ rõ.
+        </p>
       </div>
+
       <div class="recommend">
         <p>Có thể bạn sẽ thích</p>
         <div class="item-recommend">

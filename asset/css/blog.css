@@ -241,8 +241,17 @@ a:hover {
   justify-content: center;
 }
 .main-blog figure {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   width: 100%;
   text-align: center;
+}
+.main-blog figure span {
+  font-size: 20px;
+}
+.main-blog figure b {
+  font-size: 20px;
 }
 .main-blog figure img {
   text-align: center;

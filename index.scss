@@ -78,7 +78,7 @@ body {
       list-style-type: none;
     }
     a {
-      padding: 4px;
+      padding: 10px;
       text-decoration: none;
       font-style: normal;
       font-weight: 400;
@@ -87,9 +87,12 @@ body {
       /* identical to box height, or 175% */
       text-align: center;
       color: #5f5b53;
+      border-radius: 10px;
     }
     a:hover {
       color: #171100;
+      border: solid 1px #433511c8;
+      box-shadow: 1px 0.5px 1px 1px #333;
     }
     button {
       padding: 11px 41px;
@@ -173,6 +176,36 @@ body {
         box-shadow: -3px 5px 5px 10px #4a3807;
         border-radius: 6px;
       }
+    }
+  }
+}
+.conversion {
+  width: 100%;
+
+  .box-icon {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    img {
+      height: 70px;
+    }
+    p {
+      background-color: #fff;
+      padding: 10px 15px;
+      border-radius: 30px;
+    }
+    span {
+      margin-left: 15px;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+    .text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }

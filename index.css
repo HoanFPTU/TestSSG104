@@ -83,7 +83,7 @@ body {
   list-style-type: none;
 }
 .sticky .header a {
-  padding: 4px;
+  padding: 10px;
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
@@ -92,9 +92,12 @@ body {
   /* identical to box height, or 175% */
   text-align: center;
   color: #5f5b53;
+  border-radius: 10px;
 }
 .sticky .header a:hover {
   color: #171100;
+  border: solid 1px rgba(67, 53, 17, 0.7843137255);
+  box-shadow: 1px 0.5px 1px 1px #333;
 }
 .sticky .header button {
   padding: 11px 41px;
@@ -173,6 +176,36 @@ body {
   width: 100%;
   box-shadow: -3px 5px 5px 10px #4a3807;
   border-radius: 6px;
+}
+
+.conversion {
+  width: 100%;
+}
+.conversion .box-icon {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+.conversion .box-icon img {
+  height: 70px;
+}
+.conversion .box-icon p {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+.conversion .box-icon span {
+  margin-left: 15px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+.conversion .box-icon .text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .block2 {

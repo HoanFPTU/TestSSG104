@@ -418,4 +418,8 @@ footer .box-top .right .desc {
   color: #bfbcb2;
   font-family: "Poppins";
   font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=blog.css.map */

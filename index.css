@@ -312,4 +312,37 @@ footer .box-top .right .desc {
   color: #bfbcb2;
   font-family: "Poppins";
   font-style: normal;
+}
+
+.blur {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    position: relative;
+    overflow: hidden;
+  }
+  body .blur {
+    display: block;
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.8980392157);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  body .blur p {
+    color: #ccc;
+    font-size: 25px;
+    box-shadow: 1px 1px 1px 1px rgba(54, 50, 50, 0.526);
+    text-align: center;
+    padding: 30px;
+  }
 }/*# sourceMappingURL=index.css.map */

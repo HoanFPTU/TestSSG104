@@ -21,6 +21,11 @@
   border-radius: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -215,6 +220,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 70px;
+}
+.block2 .item {
+  position: relative;
+}
+.block2 i.play {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 36px !important;
+  position: absolute;
+  top: 125px;
 }
 .block2 .contain-items {
   width: 100%;

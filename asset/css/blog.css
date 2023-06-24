@@ -422,4 +422,5 @@ footer .box-top .right .desc {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }/*# sourceMappingURL=blog.css.map */

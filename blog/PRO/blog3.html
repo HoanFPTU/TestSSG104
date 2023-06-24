@@ -52,111 +52,67 @@
     </div>
     <div class="content-blog">
       <div class="main-blog">
-        <h1>HƯỚNG DẪN CÀI ĐẶT NETBEANS 8.2 VÀ JDK 1.8</h1>
-        <pre style="font-size: 16px">
-            #include &#x3C;stdio.h&#x3E;
-            #include &#x3C;stdlib.h&#x3E;
-            
-            /* run this program using the console pauser or add your own getch,
-            system(&#x22;pause&#x22;) or input loop */
-            int isFibonacci(int n);
-            int main(int argc, char *argv[])
-            {
-                int n;
-                do
-                {
-                    printf(&#x22;Enter a number: &#x22;);
-                    scanf(&#x22;%d&#x22;, &#x26;n);
-                    if(isFibonacci(n)==1)
-                        printf(&#x22;It is a Fibonacci element\n&#x22;);
-                    else printf(&#x22;It is not a Fibonacci element\n&#x22;);
-                } while (n &#x3E; 1);
-            
-                getch();
-                return 0;
-            }
-            int isFibonacci(int n)
-            {
-                int t1 = 1, t2 = 1, f = 1;
-                if(n==1)
-                    return 1;
-                while (f&#x3C;n)
-                {
-                    f = t1 + t2;
-                    t1 = t2;
-                    t2 = f;
-                }
-                return n==f;
-            }
-            void printFibonacci(int n)
-            {
-                int i=1;
-                for(i;i&#x3C;=n;i++)
-                {
-                    if(isFibonacci(i)==1)
-                    {
-                        printf(&#x22;%d\t&#x22;, i);
-                    }
-                }
-            }
-            </pre
-        >
+        <h1>ĐỊNH NGHĨA MỘT LỚP, VÀ CÁCH SỬ DỤNG</h1>
+        <b>Lý Thuyết</b>
+        <p>
+          Ở blog trước mình đã giải thích sơ qua lập trình hướng đối tượng và đã
+          biết một số khái niệm như lớp, đối tượng, thuộc tính và phương thức. Ở
+          blog này mình sẽ định nghĩa ra một lớp và sử các đối tượng thuộc lớp
+          này..
+        </p>
+        <p>
+          Về bản chất, lớp (class) là một kiểu dữ liệu bạn tự định nghĩa và đối
+          tượng chính là biến của dữ liệu này. Cú pháp để khai báo một lớp như
+          sau:
+        </p>
 
         <figure>
-          <img
-            src="../../img/blog/PRF/blog1/blog11.png"
-            alt="Thành phần máy tính"
-          />
+          <img src="../../img/blog/PRO/blog3/1.png" alt="Thành phần máy tính" />
           <figcaption></figcaption>
         </figure>
         <p>
-          Đầu tiên chúng ta tìm hiểu dãy Fibonacci là gì: Dãy Fibonacci là dãy
-          vô hạn các số tự nhiên bắt đầu bằng hai phần tử 0 hoặc 1 và 1, các
-          phần tử sau đó được thiết lập theo quy tắc mỗi phần tử luôn bằng tổng
-          hai phần tử trước nó. Công thức của dãy Fibonacci là:
+          Ví dụ bạn có thể ra lớp <b>Student</b> với 2 tuộc tính là
+          <b>name, age</b> và 2 phương thức là <b>getInformatrion()</b> và
+          <b>display()</b>
+          giống như sau:
         </p>
         <figure>
-          <img
-            src="../../img/blog/PRF/blog1/blog12.png"
-            alt="Thành phần máy tính"
-          />
+          <img src="../../img/blog/PRO/blog3/2.png" alt="Thành phần máy tính" />
           <figcaption></figcaption>
         </figure>
-        <p>Chương trình định nghĩa một hàm isFibonacci và hàm main.</p>
+
         <p>
-          Hàm <b>isFibonacci</b> nhận một số nguyên <b>n</b> làm đối số và trả
-          về một số nguyên. Nó kiểm tra xem số <b>n</b> có phải là phần tử của
-          dãy Fibonacci hay không. Trong hàm này, ba biến <b>t1</b>, <b>t2</b>,
-          và<b> f</b> được khởi tạo ban đầu là 1. Nếu <b>n</b> là 1, nó trả về
-          1, cho biết rằng nó là một phần tử Fibonacci. Trong vòng lặp while,<b>
-            f</b
-          >
-          được tính bằng tổng của hai số trước đó <b>t1</b> và <b>t2</b>, sau đó
-          <b>t1</b> và <b>t2</b> được cập nhật. Nếu <b>n</b> bằng<b> f</b>, nó
-          trả về 1, ngược lại trả về 0.
+          Để khai báo đối tượng của một lớp bạn dùng từ khoá <b>new</b>. Ví dụ
+          để khai báo một đối tượng thuộc lớp <b>Student</b> bạn làm như sau:
         </p>
-        <h2>Trong hàm main</h2>
-        <ul>
-          <li>Một biến số nguyên <b>n</b> được khai báo.</li>
-          <li>
-            Chương trình vào một vòng lặp <b>do-while</b>, chạy cho đến khi giá
-            trị của <b>n</b> lớn hơn 1.
-          </li>
-          <li>
-            Trong vòng lặp, người dùng được nhắc để nhập một số và sau đó
-            <b>isFibonacci</b> được gọi với số đó. Nếu kết quả trả về là 1,
-            thông báo rằng số đó là một phần tử của dãy Fibonacci được in ra.
-            Ngược lại, thông báo rằng số đó không phải là một phần tử của dãy
-            Fibonacci.
-          </li>
-        </ul>
+
         <figure>
-          <img
-            src="../../img/blog/PRF/blog1/blog13.png"
-            alt="Thành phần máy tính"
-          />
+          <img src="../../img/blog/PRO/blog3/3.png" alt="Thành phần máy tính" />
           <figcaption></figcaption>
         </figure>
+        <p>
+          Để truy xuất tới các thuộc tính và phương thức của một đối tượng bạn
+          dùng toán tử “.”:
+        </p>
+        <figure>
+          <img src="../../img/blog/PRO/blog3/4.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p><b>Kế quả khi chạy ra màn hình sẽ là:</b> My name is Đat</p>
+        <p>
+          Có thể thấy lớp và đối tượng chỉ đơn giản là kiểu dữ liệu(datatype) và
+          biến (variables). Kiểu dữ liệu này khác kiểu dữ liệu như int, string,
+          double, etc. Bởi vì nó có thể chứa các phương thức và kiểu dữ liệu
+          khác.
+        </p>
+        <p>
+          Bây giờ bạn đã hiểu sơ lược định nghĩa về lớp(class) và cách sử dụng.
+          Cùng mình làm một bài tập nhỏ để review lại kiến thức mình đã nói nhé.
+        </p>
+        <p>
+          // tạo một class có tên là student để lấy thông tin cá nhân và in ra
+          màn hình
+        </p>
       </div>
       <div class="recommend">
         <p>Có thể bạn sẽ thích</p>

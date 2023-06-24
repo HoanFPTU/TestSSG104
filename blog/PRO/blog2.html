@@ -52,111 +52,110 @@
     </div>
     <div class="content-blog">
       <div class="main-blog">
-        <h1>HƯỚNG DẪN CÀI ĐẶT NETBEANS 8.2 VÀ JDK 1.8</h1>
-        <pre style="font-size: 16px">
-            #include &#x3C;stdio.h&#x3E;
-            #include &#x3C;stdlib.h&#x3E;
-            
-            /* run this program using the console pauser or add your own getch,
-            system(&#x22;pause&#x22;) or input loop */
-            int isFibonacci(int n);
-            int main(int argc, char *argv[])
-            {
-                int n;
-                do
-                {
-                    printf(&#x22;Enter a number: &#x22;);
-                    scanf(&#x22;%d&#x22;, &#x26;n);
-                    if(isFibonacci(n)==1)
-                        printf(&#x22;It is a Fibonacci element\n&#x22;);
-                    else printf(&#x22;It is not a Fibonacci element\n&#x22;);
-                } while (n &#x3E; 1);
-            
-                getch();
-                return 0;
-            }
-            int isFibonacci(int n)
-            {
-                int t1 = 1, t2 = 1, f = 1;
-                if(n==1)
-                    return 1;
-                while (f&#x3C;n)
-                {
-                    f = t1 + t2;
-                    t1 = t2;
-                    t2 = f;
-                }
-                return n==f;
-            }
-            void printFibonacci(int n)
-            {
-                int i=1;
-                for(i;i&#x3C;=n;i++)
-                {
-                    if(isFibonacci(i)==1)
-                    {
-                        printf(&#x22;%d\t&#x22;, i);
-                    }
-                }
-            }
-            </pre
-        >
-
+        <h1>CLASS VÀ OBJECT TRONG JAVA OOP</h1>
+        <p>
+          Đây là bài đầu tiên trong series học lập trình hướng đối tượng với
+          Java của nhóm mình, trước khi tới với Java OOP, mình sẽ gửi tới các
+          bạn một số kiến thức cơ bản mà mình học được trường, đây là một số cơ
+          bản như biến, câu điều kiện, vòng lặp, phương thứ.
+        </p>
+        <h2>1. Lập trình hướng đối tượng là gì?</h2>
+        <h3>a. Lý thuyết:</h3>
+        <p>
+          - Chắc bạn cũng đã ít nhiều nghe tới ngôn ngữ lập trình hướng đối
+          tượng Java, nhưng qua thời gian học vì một số lý do bất cập nào đó mà
+          bạn không biết lập trình hướng đối tượng là gì? Code như thế nào? Thì
+          lẹt gâu, cùng mình tìm hiểu nhé.
+        </p>
+        <p>
+          - Lập trình hướng đối tượng được hiểu đơn giản là phương pháp để giải
+          quyết bài toán lập trình mà khi áp dụng code sẽ trở nên DỄ PHÁT TRIẺN
+          và DỄ BẢO TRÌ. Đây là một phướng pháp tien tiến, phù hợp để phát triển
+          hầu hết các ứng dụng hiện nay. Phương pháp này sẽ giải quyết bài toán
+          bằng cách chia chương trình thành các đối tượng, với mỗi đối tượng sẽ
+          có các thuộc tính (dữ liệu) và hành vi riêng( phương thức).
+        </p>
+        <p>
+          Để có một cái trực quan về lập trình hướng đối tượng, thì bạn có thể
+          tham khảo một chương trình viết dưới.
+        </p>
         <figure>
-          <img
-            src="../../img/blog/PRF/blog1/blog11.png"
-            alt="Thành phần máy tính"
-          />
+          <img src="../../img/blog/PRO/blog2/1.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>Và kết quả sau khi chạy chương trình là:</p>
+        <figure>
+          <img src="../../img/blog/PRO/blog2/2.png" alt="Thành phần máy tính" />
           <figcaption></figcaption>
         </figure>
         <p>
-          Đầu tiên chúng ta tìm hiểu dãy Fibonacci là gì: Dãy Fibonacci là dãy
-          vô hạn các số tự nhiên bắt đầu bằng hai phần tử 0 hoặc 1 và 1, các
-          phần tử sau đó được thiết lập theo quy tắc mỗi phần tử luôn bằng tổng
-          hai phần tử trước nó. Công thức của dãy Fibonacci là:
+          Chương trình trên tạo ra một đối tượng học sinh, sau đó thực hiện tên
+          và tuổi cho đối tượng này và hiển thị thông tin của đối tượng ra màn
+          hình.
         </p>
-        <figure>
-          <img
-            src="../../img/blog/PRF/blog1/blog12.png"
-            alt="Thành phần máy tính"
-          />
-          <figcaption></figcaption>
-        </figure>
-        <p>Chương trình định nghĩa một hàm isFibonacci và hàm main.</p>
-        <p>
-          Hàm <b>isFibonacci</b> nhận một số nguyên <b>n</b> làm đối số và trả
-          về một số nguyên. Nó kiểm tra xem số <b>n</b> có phải là phần tử của
-          dãy Fibonacci hay không. Trong hàm này, ba biến <b>t1</b>, <b>t2</b>,
-          và<b> f</b> được khởi tạo ban đầu là 1. Nếu <b>n</b> là 1, nó trả về
-          1, cho biết rằng nó là một phần tử Fibonacci. Trong vòng lặp while,<b>
-            f</b
-          >
-          được tính bằng tổng của hai số trước đó <b>t1</b> và <b>t2</b>, sau đó
-          <b>t1</b> và <b>t2</b> được cập nhật. Nếu <b>n</b> bằng<b> f</b>, nó
-          trả về 1, ngược lại trả về 0.
-        </p>
-        <h2>Trong hàm main</h2>
         <ul>
-          <li>Một biến số nguyên <b>n</b> được khai báo.</li>
-          <li>
-            Chương trình vào một vòng lặp <b>do-while</b>, chạy cho đến khi giá
-            trị của <b>n</b> lớn hơn 1.
+          Ví dụ này chỉ để cho bạn cái nhìn qua và cảm nhận được về phương pháp
+          lập trình hướng đối tượng nên đừng lo nếu bạn không hiểu các đoạn
+          code. Có thể thấy lập trình hướng đối đối tượng là phương pháp mà giải
+          quyết các bài toán thông qua các đối tượng. Trước khi đi sâu hơn, bạn
+          cần biết một số khai niệm cơ bản trong lập trình hướng đối tượng sau:
+          <li class="non-ls">
+            A Lớp(Class) là nơi định nghĩa các thông tin về các đối tượng, bạn
+            cũng có thể hiểu lớp là một kiểu dữ liệu mà biến của kiểu dữ liệu
+            này được coi như là một đối tượng. Như trong ví dụ trên thì Student
+            là lớp dung để mô tả thông tin về các đối tượng học sinh. Ví dụ về
+            lớp: Học sinh, Giáo viên, Xe ô tô,..
           </li>
-          <li>
-            Trong vòng lặp, người dùng được nhắc để nhập một số và sau đó
-            <b>isFibonacci</b> được gọi với số đó. Nếu kết quả trả về là 1,
-            thông báo rằng số đó là một phần tử của dãy Fibonacci được in ra.
-            Ngược lại, thông báo rằng số đó không phải là một phần tử của dãy
-            Fibonacci.
+          <figure>
+            <img
+              src="../../img/blog/PRO/blog2/3.png"
+              alt="Thành phần máy tính"
+            />
+            <figcaption></figcaption>
+          </figure>
+          <li class="non-ls">
+            B Đối tượng(object) là một thể hiện của lớp, bạn có thể hiểu đối
+            tượng là một biến. Như trong ví dụ trên thì biến student1 là một đói
+            tượng đại diện cho thông tin của một học sinh.
+          </li>
+          <figure>
+            <img
+              src="../../img/blog/PRO/blog2/4.png"
+              alt="Thành phần máy tính"
+            />
+            <figcaption></figcaption>
+          </figure>
+          <li class="non-ls">
+            C Thuộc tính(attribute) là các đặc điểm của đối tượng, như trong ví
+            dụ trên thì name và age là hai thuộc tính của đối tượng học sinh.
+            <figure>
+              <img
+                src="../../img/blog/PRO/blog2/5.png"
+                alt="Thành phần máy tính"
+              />
+              <figcaption></figcaption>
+            </figure>
+            Ví dụ về thuộc tính thì ta có tên, tuổi, chiều cao, cân nặng, năm
+            sinh…
+          </li>
+
+          <li class="non-ls">
+            D Phương thức(method) là hành vi( hành động) của đối tượng, như ví
+            dụ trên thì display() là một phương thức dung để “giới thiệu bản
+            thân” của học sinh.
+            <figure>
+              <img
+                src="../../img/blog/PRO/blog2/6.png"
+                alt="Thành phần máy tính"
+              />
+              <figcaption></figcaption>
+            </figure>
+            Ví dụ về phương thức: giới thiệu bản than, học bài, chạy…. Đọc tới
+            đây thì chúc mừng bạn nhé, bạn đã hiểu hơn về lập trình hướng đối
+            tượng, ở các blog tiếp theo bạn sẽ học được cách tạo và sử dụng các
+            đối tượng. Các bạn hãy đón chờ nhoé!
           </li>
         </ul>
-        <figure>
-          <img
-            src="../../img/blog/PRF/blog1/blog13.png"
-            alt="Thành phần máy tính"
-          />
-          <figcaption></figcaption>
-        </figure>
       </div>
       <div class="recommend">
         <p>Có thể bạn sẽ thích</p>

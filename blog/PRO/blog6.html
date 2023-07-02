@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F-Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/f-study.png" />
+    <link rel="stylesheet" href="../../asset/css/blog.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-YNT8HFPQG4");
+  </script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-YNT8HFPQG4"
+  ></script>
+  <body>
+    <div class="sticky">
+      <header class="header">
+        <img src="../../img/f-study.png" alt="" />
+        <p>F-Learning</p>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../blog.html">Blog</a></li>
+          <li><a href="../../Video.html">Video</a></li>
+          <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+        <button class="btn" id="1">Sign up</button>
+      </header>
+    </div>
+    <div class="content-blog">
+      <div class="main-blog">
+        <h1>PHẠM VI TRUY CẬP</h1>
+        <p>Bạn hãy cho biết kết quả khi chạy chương trình sau:</p>
+
+        <figure>
+          <img src="../../img/blog/PRO/blog6/1.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+
+        <h2>LÝ THUYẾT:</h2>
+        <p>
+          Nhìn vào đoạn code khai báo phương thức display() bạn sẽ thấy có từ
+          khoá private. Với các bài trước bạn đã quen với việc khai báo một
+          phương thức bắng từ khoá public, vậy sự khác nhau giữa public và
+          private là gì? Thì qua blog ny mình sẽ giúp các bạn hiểu rõ
+        </p>
+        <h2>Phạm quy truy cập</h2>
+        <p>
+          Phạm vi truy cập là khai niệm để xác định xem một hay một phương thức
+          có được truy xuất từ bên ngoài hay không. Trong java có 4 loại phạm vi
+          truy cập: private, default,protected và public. Xem bảng minh hoạ dưới
+          đây để có cái nhìn quan về phạm vi truy cập:
+        </p>
+        <figure>
+          <img src="../../img/blog/PRO/blog6/2.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <h2>Phạm vi truy cập private:</h2>
+        <p>
+          Đây là phạm vi truy cập hạn chế nhất, tất cả thuộc tính và phương thức
+          sẽ chỉ được truy xuất từ bên trong lớp đó. Ví dụ nếu bạ truy xuất một
+          thuộc tính hoặc phương thức được khai báo với từ khoá private từ một
+          lớp khác thì chương trình sẽ báo lỗi giốngd như sau:
+        </p>
+        <figure>
+          <img src="../../img/blog/PRO/blog6/3.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          Để chương trình trên có thêr chạy được bạn cần thay đỏi phạm quy truy
+          cập của thuộc tính name trong lớp Student sang default, protected hoặc
+          public.
+        </p>
+        <h2>Phạm vi truy cập mặc định (default):</h2>
+        <p>
+          Khi khai báo một thuộc tính hoặc một phương thức mà không khai báo
+          phạm vi truy cập thì chương trình sẽ hiểu là bạn đang khai báo với
+          phạm vi truy cập mặc định. Các biến và các phương thức có phạm vi truy
+          cập mặc định chỉ có thể truy xuất trong cùng một package. Ví dụ trong
+          cùng package OOP bạn cso thể truy xuất tới thuộc tính của lớp Student
+          từ lớp Entry giống chương trình sau.
+        </p>
+        <figure>
+          <img src="../../img/blog/PRO/blog6/4.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>Nhưng nếu 2 lớp này khác package thì chương trình sẽ báo lỗi:</p>
+        <figure>
+          <img src="../../img/blog/PRO/blog6/5.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          Trong trường hợp trên, để chương trình chạy được bạn cần thay đổi phạm
+          vi truy cập từ default sang public. <br />
+          Lưu ý: muốn sử dụng một lớp từ package khác thì bạn cần import lớp này
+          vào bằng câu lệnh import.
+        </p>
+        <figure>
+          <img src="../../img/blog/PRO/blog6/6.png" alt="Thành phần máy tính" />
+          <figcaption></figcaption>
+        </figure>
+        <h2>Phạm vi truy cập protected</h2>
+        <p>
+          Đây là phạm vi truy cập tương tự với phạm vi truy cập default nhưng ít
+          hạnchee hơn ở chỗ các thuộc tính và các phương thức có phạm vi truy
+          này có thể được truy xuất từ một lớp con của package khác.
+        </p>
+        <h2>Phạm vi truy cập public</h2>
+        <p>
+          Đây là phạm vi truy cập rộng nhất, các thuôccj tính và phương thức có
+          phạm vi truy cập này cso thể được truy xuất từ bất cứ đâu( kể cả từ
+          các package khác).
+        </p>
+      </div>
+      <div class="recommend">
+        <p>Có thể bạn sẽ thích</p>
+        <div class="item-recommend">
+          <div class="item">
+            <img src="../../img/blog/PRF/blog1/avt.png" alt="" />
+            <div class="text-item">
+              <h3 class="title">
+                <a href="../../blog/PRF/1.html"
+                  >Giới thiệt về thuật toán kiểm tra xem một số có phải là phần
+                  tử của dãy Fibonacci hay không.</a
+                >
+              </h3>
+              <i>Subject: <b>PRF</b> </i>
+              <p>Author: Hưng</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../img/blog/PRF/blog2/avt.png" alt="" />
+            <div class="text-item">
+              <h3 class="title">
+                <a href="../../blog/PRF/2.html"
+                  >Giới thiệu về con trỏ trong C</a
+                >
+              </h3>
+              <i>Subject: <b>PRF</b> </i>
+              <p>Author: Hưng</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../img/blog/PRF/blog3/avt.webp" alt="" />
+            <div class="text-item">
+              <h3 class="title">
+                <a href="../../blog/PRF/3.html"
+                  >Tìm hiểu về Mảng trong lập trình C</a
+                >
+              </h3>
+              <i>Subject: <b>PRF</b> </i>
+              <p>Author: Hưng</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../img/blog/PRF/blog4/avt.jpg" alt="" />
+            <div class="text-item">
+              <h3 class="title">
+                <a href="../../blog/PRF/4.html"
+                  >Tìm hiểu về kích cỡ của các kiểu dữ liệu.</a
+                >
+              </h3>
+              <i>Subject: <b>PRF</b> </i>
+              <p>Author: Hưng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="content">
+        <div class="box-top">
+          <div class="left">
+            <h2>F-Learning</h2>
+            <p class="desc">
+              This page is created by Group 1 - Class SE1840 - Subject: SSG104
+              to help student know about semester 1,2 in FPTU.
+            </p>
+
+            <div class="box-icon">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+          </div>
+          <div class="right">
+            <ul class="column">
+              <li class="desc">Company</li>
+              <li class="desc">About Us</li>
+              <li class="desc">Features</li>
+              <li class="desc">Our Pricing</li>
+              <li class="desc">Latest News</li>
+            </ul>
+            <ul class="column">
+              <li class="desc">Support</li>
+              <li class="desc">FAQ’s</li>
+              <li class="desc">Terms & Conditions</li>
+              <li class="desc">Privacy Policy</li>
+              <li class="desc">Contact Us</li>
+            </ul>
+            <ul class="column">
+              <li class="desc">Address</li>
+              <li class="desc">
+                <span>Location:</span> District 9, Long Thanh My, Ho Chi Minh
+              </li>
+              <li class="desc"><span>Email:</span> flearningk17@gmail.com</li>
+              <li class="desc"><span>Phone:</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../../index.js"></script>
+</html>

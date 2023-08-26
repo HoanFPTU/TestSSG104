@@ -23,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 120px;
 }
 
 /* Handle on hover */
@@ -32,27 +32,30 @@ html {
 }
 
 :root {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   --primary-color: #ffb900;
 }
 
 body {
-  background-color: #ffb900;
-  background-image: linear-gradient(180deg, #ffdd64 0%, #bfbcb3 100%);
+  background-color: #f6f4f3;
+  background-image: linear-gradient(180deg, #f6f4f3 0%, #bfbcb3 100%);
 }
 
 .content {
   max-width: 1170px;
   margin: auto;
 }
-
+.row {
+  display: flex;
+  flex-direction: row;
+}
 .sticky {
   padding-bottom: 26px;
   position: fixed;
   padding-top: 10px;
   top: 0px;
   width: 100%;
-  background-color: #ffdd64;
+  background-color: #f6f4f3;
   z-index: 1;
 }
 .sticky .header {
@@ -84,7 +87,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 30px;
-  margin-right: 70px;
+
   list-style-type: none;
 }
 .sticky .header a {
@@ -148,7 +151,28 @@ body {
   min-height: 1000px;
   width: 100%;
 }
-.block1 .block1__body {
+.block1 .content > img {
+  width: 100%;
+}
+.block1 .row img {
+  width: 200px;
+  height: 250px;
+}
+.block1 p {
+  flex-grow: 1;
+  text-align: start;
+  font-size: 20px;
+}
+.img-block {
+  margin-top: 32px;
+  align-items: center;
+  gap: 10px;
+}
+img {
+  object-fit: cover;
+}
+
+/* .block1 .block1__body {
   padding: 150px 0 65px 0;
   display: flex;
   align-items: center;
@@ -181,7 +205,7 @@ body {
   width: 100%;
   box-shadow: -3px 5px 5px 10px #4a3807;
   border-radius: 6px;
-}
+} */
 
 .conversion {
   width: 100%;
@@ -217,11 +241,13 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 150px 0 65px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
-.block2 .item {
+.block2 .content > h2 {
+  text-align: start;
+}
+/* .block2 .item {
   position: relative;
 }
 .block2 i.play {
@@ -260,7 +286,7 @@ body {
 .block2 .contain-items .item i,
 .block2 .contain-items .item p {
   font-size: 12px;
-}
+} */
 
 a {
   text-decoration: none;
@@ -363,4 +389,4 @@ footer .box-top .right .desc {
     text-align: center;
     padding: 30px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
